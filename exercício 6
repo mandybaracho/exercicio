@@ -1,0 +1,26 @@
+class Pessoa:
+    def __init__(self, nome, idade, altura):
+        self.nome = nome
+        self.idade = idade
+        self.altura = altura
+
+    def definir_nome(self, nome):
+        self.nome = nome
+
+    def obter_nome(self):
+        return self.nome
+
+    def definir_idade(self, idade):
+        self.idade = idade
+
+    def obter_idade(self):
+        return self.idade
+
+    def definir_altura(self, altura):
+        self.altura = altura
+
+    def obter_altura(self):
+        return self.altura
+
+    def cumprimentar(self):
+        return f"Olá, meu nome é {self.nome}. Tenho {self.idade} anos e minha altura é {self.altura} metros."
