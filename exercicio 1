@@ -1,0 +1,30 @@
+class Carro:
+    def __init__(self, marca, modelo, ano, cor):
+        self.marca = marca
+        self.modelo = modelo
+        self.ano = ano
+        self.cor = cor
+        self.ligado = False
+        self.velocidade = 0
+
+    def ligar(self):
+        if not self.ligado:
+            print("Carro ligado.")
+            self.ligado = True
+        else:
+            print("O carro já está ligado.")
+
+    def desligar(self):
+        if self.ligado:
+            print("Carro desligado.")
+            self.ligado = False
+            self.velocidade = 0
+        else:
+            print("O carro já está desligado.")
+
+    def acelerar(self, velocidade):
+        if self.ligado:
+            self.velocidade += velocidade
+            print(f"Acelerando. Velocidade atual: {self.velocidade} km/h")
+        else:
+            print("Não é possível acelerar. O carro está desligado.")
