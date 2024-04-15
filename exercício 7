@@ -1,0 +1,17 @@
+class Livro:
+    def __init__(self, titulo, autor, num_paginas):
+        self.titulo = titulo
+        self.autor = autor
+        self.num_paginas = num_paginas
+
+    def mostrar_informacoes(self):
+        print("Informações do Livro:")
+        print(f"Título: {self.titulo}")
+        print(f"Autor: {self.autor}")
+        print(f"Número de páginas: {self.num_paginas}")
+
+    def calcular_palavras_por_pagina(self, num_palavras):
+        if self.num_paginas > 0:
+            return num_palavras / self.num_paginas
+        else:
+            return 0
