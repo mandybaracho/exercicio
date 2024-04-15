@@ -1,0 +1,15 @@
+class Triangulo:
+    def __init__(self, lado1, lado2, lado3):
+        self.lado1 = lado1
+        self.lado2 = lado2
+        self.lado3 = lado3
+
+    def calcular_perimetro(self):
+        return self.lado1 + self.lado2 + self.lado3
+
+    def calcular_area(self):
+        # Fórmula de Heron para calcular a área de um triângulo dado os lados
+        semiperimetro = self.calcular_perimetro() / 2
+        area = (semiperimetro * (semiperimetro - self.lado1) *
+                (semiperimetro - self.lado2) * (semiperimetro - self.lado3)) ** 0.5
+        return area
